@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking CSS -->
+</head>
+<body>
+
+    <div class="message">
+        <button class="message__btn">Click Me</button>
+        <p class="message__text"></p> 
+    </div>
+
+    <button class="reload">Reload</button>
+    <!-- Using anchor tag and styling it like a button -->
+    <a href="index2.html" class="next" style="display: none; position: absolute; bottom: 20px; right: 20px; background-color: #f25c54; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; text-decoration: none; text-align: center; z-index: 10;">Next</a>
+
+    
+    <!-- Particles.js container -->
+    <div id="particles-js"></div>
+
+    <script src="index.js"></script> <!-- Linking JavaScript -->
+    <script>
+        document.querySelector(".message__btn").addEventListener("click", function() {
+            setTimeout(() => {
+                const nextButton = document.querySelector(".next");
+                nextButton.style.display = "block";
+                nextButton.style.zIndex = 10; // Ensure it's clickable
+            }, 1500);
+        });
+
+    </script>
+
+</body>
+</html>
